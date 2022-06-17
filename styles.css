@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #373B44, #4286f4);
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+
+.slide {
+    border-radius: 20px;
+    width: 80vh;
+    height: 80vh;
+    margin: 10px;
+    cursor: pointer;
+    flex: 1;
+    color: rgb(231, 231, 231);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.slide h3 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    font-size: 24px;
+    opacity: 0;
+}
+
+.slide.active {
+    flex: 10;
+}
+.slide.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+} 
